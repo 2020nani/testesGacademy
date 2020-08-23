@@ -3,9 +3,26 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <table = class="table">
+      <thead>
+        <th scoppe="col">#</th>
+        <th scoppe="col">Nome</th>
+        <th scoppe="col">Telefone</th>
+      </thead>
+      <tbody>
+        <% for( let cliente of clientes){ %>
+          <tr>
+          <th scoppe="row"><%= cliente.id %></th>
+          <td><%= cliente.nome %></td>
+          <td><%= cliente.telefone %></td>
+        </tr>
+      <% } %>
+      </tbody>
+    </table>
   </body>
 </html>
